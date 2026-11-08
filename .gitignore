@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Generated course sites (but keep the bundled example site)
+site/
+!learning-skill-html/examples/quickstart/site/
+!learning-skill-html/examples/quickstart/site/**
+*.learning-skill-html.json
+!learning-skill-html/examples/quickstart/site/.learning-skill-html.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

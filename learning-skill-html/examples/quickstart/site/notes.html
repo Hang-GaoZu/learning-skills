@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>主笔记 · 请求处理入门</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="document" data-kind="notes">
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="course-sidebar" aria-label="课程文档导航">
+      <div class="sidebar-brand">
+        <a class="brand-link" href="index.html">
+          <span class="brand-mark" aria-hidden="true">学</span>
+          <span>
+            <strong>请求处理入门</strong>
+            <small>HTML 学习站点</small>
+          </span>
+        </a>
+      </div>
+      <div class="sidebar-status">
+        <span>课程进度</span>
+        <strong>第 1 步</strong>
+      </div>
+      <nav class="side-nav">
+        <div class="nav-group">
+<p class="nav-group-title">开始学习</p>
+<a class="side-link is-active" href="notes.html" aria-current="page"><span class="side-icon" aria-hidden="true">记</span><span>主笔记</span></a>
+<a class="side-link" href="learning-overview.html"><span class="side-icon" aria-hidden="true">线</span><span>课程主线</span></a>
+</div>
+<div class="nav-group">
+<p class="nav-group-title">课程正文</p>
+<a class="side-link" href="step-01.html"><span class="side-icon" aria-hidden="true">步</span><span>第 1 步 · 三关口模型</span></a>
+</div>
+<div class="nav-group">
+<p class="nav-group-title">练习与记忆</p>
+<a class="side-link" href="self-test.html"><span class="side-icon" aria-hidden="true">测</span><span>自测与出口验收</span></a>
+<a class="side-link" href="cards-source.html"><span class="side-icon" aria-hidden="true">卡</span><span>记忆卡片 · 源文档</span></a>
+<a class="side-link" href="cards-typing.html"><span class="side-icon" aria-hidden="true">打</span><span>记忆卡片 · 打字默写</span></a>
+</div>
+<div class="nav-group">
+<p class="nav-group-title">进度管理</p>
+<a class="side-link" href="course-state.html"><span class="side-icon" aria-hidden="true">状</span><span>课程状态</span></a>
+<a class="side-link" href="next-outline.html"><span class="side-icon" aria-hidden="true">草</span><span>第 3 步备课草稿</span></a>
+</div>
+      </nav>
+      <div class="sidebar-footer">
+        <p>文档分区：开始学习</p>
+        <p>更新 2026-11-01</p>
+      </div>
+    </aside>
+
+    <main class="main-content" id="main-content">
+      <div class="mobile-bar">
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="course-sidebar">
+          <span aria-hidden="true">☰</span>
+          目录
+        </button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换明暗主题">
+          <span data-theme-label>深色</span>
+        </button>
+      </div>
+
+      <header class="doc-header">
+        <div class="breadcrumbs">
+          <a href="index.html">学习总览</a>
+          <span aria-hidden="true">/</span>
+          <span>开始学习</span>
+        </div>
+        <div class="doc-title-row">
+          <div>
+            <p class="eyebrow">notes</p>
+            <h1>主笔记</h1>
+            <p class="doc-description">课程主干、累计比喻地图和当前进度。</p>
+          </div>
+          <span class="badge">持续更新</span>
+        </div>
+      </header>
+
+      <article class="doc-content" id="document-content">
+        <p class="kicker">课程主干</p>
+<h1>请求处理主笔记</h1>
+<p>核心口诀：<strong>先进队，后处理，再返回</strong>。顺序变化不是排版问题，而是系统语义变化。</p>
+
+<h2>累计比喻地图</h2>
+<pre><code>饭馆
+├─ 顾客 ───────── 请求
+├─ 等候区 ─────── 队列
+├─ 服务窗口 ───── 处理器
+└─ 出餐口 ─────── 响应</code></pre>
+
+<h2>进度表</h2>
+<table>
+  <thead>
+    <tr><th>步骤</th><th>概念</th><th>验收</th><th>薄弱点</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>三关口模型</td><td>待作答</td><td>暂无</td></tr>
+    <tr><td>2</td><td>队列背压</td><td>待学</td><td>—</td></tr>
+    <tr><td>3</td><td>失败重试</td><td>待学</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <strong>边界提醒：</strong>“处理”并不等于“成功”。处理完成只表示计算结束，返回步骤仍可能遇到调用方已离开等情况。
+</div>
+
+      </article>
+
+      <nav class="page-nav" aria-label="文档前后导航">
+        <span class="page-nav-link is-disabled"><span>上一份</span><strong>已是第一篇</strong></span>
+        <a class="page-nav-home" href="index.html">返回总览</a>
+        <a class="page-nav-link align-right" href="learning-overview.html"><span>下一份</span><strong>课程主线</strong></a>
+      </nav>
+
+      <footer class="site-footer">
+        <p>请求处理入门</p>
+        <p>最后更新 2026-11-01</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

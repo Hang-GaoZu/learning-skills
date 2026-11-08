@@ -1,0 +1,5 @@
+interface:
+  display_name: "Learning Skill HTML"
+  short_description: "生成课程主线、自测、卡片和动态演示的离线课程 HTML"
+  default_prompt: "使用 $learning-skill-html 推进当前课程，更新课程主线与状态，并重新生成有独立入口的 HTML 学习站点。"
+  brand_color: "#2457D6"

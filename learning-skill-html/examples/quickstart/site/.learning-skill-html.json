@@ -1,0 +1,17 @@
+{
+  "generator": "learning-skill-html",
+  "version": 2,
+  "manifest": "course.json",
+  "state": "course-state.json",
+  "pages": [
+    "cards-source.html",
+    "cards-typing.html",
+    "course-state.html",
+    "learning-overview.html",
+    "next-outline.html",
+    "notes.html",
+    "self-test.html",
+    "step-01.html"
+  ],
+  "updated": "2026-11-01"
+}

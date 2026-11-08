@@ -1,0 +1,128 @@
+{
+  "course": {
+    "title": "请求处理入门",
+    "summary": "用一条请求走完排队、处理和返回三个关口，示范 HTML 课程站点如何组织文档、动态演示和验收。",
+    "status": "示例课程",
+    "current_step": "1",
+    "updated": "2026-11-01",
+    "state_file": "course-state.json"
+  },
+  "groups": [
+    {
+      "id": "start",
+      "title": "开始学习",
+      "description": "先看课程主线和主笔记，再进入当前步骤。"
+    },
+    {
+      "id": "lesson",
+      "title": "课程正文",
+      "description": "每一步都有独立页面和可操作演示。"
+    },
+    {
+      "id": "practice",
+      "title": "练习与记忆",
+      "description": "自测、源卡片和打字卡片各自进入，互不挤在同一页。"
+    },
+    {
+      "id": "progress",
+      "title": "进度管理",
+      "description": "查看验收记录、复习队列和下一阶段草稿。",
+      "display": "collapsed"
+    }
+  ],
+  "documents": [
+    {
+      "id": "notes",
+      "title": "主笔记",
+      "description": "课程主干、累计比喻地图和当前进度。",
+      "entry_label": "进入主笔记",
+      "file": "notes.html",
+      "source": "content/notes.html",
+      "group": "start",
+      "kind": "notes",
+      "badge": "持续更新",
+      "icon": "记"
+    },
+    {
+      "id": "learning-overview",
+      "title": "课程主线",
+      "description": "一条总线串起所有学习节点，并显示进度、分支和复习标记。",
+      "entry_label": "打开课程主线",
+      "file": "learning-overview.html",
+      "source": "content/learning-overview.html",
+      "group": "start",
+      "kind": "progress",
+      "badge": "动态计算",
+      "icon": "线"
+    },
+    {
+      "id": "step-01",
+      "title": "第 1 步 · 三关口模型",
+      "description": "看懂请求如何经过排队、处理和返回，并亲手追踪状态。",
+      "entry_label": "学习第 1 步",
+      "file": "step-01.html",
+      "source": "content/step-01.html",
+      "group": "lesson",
+      "kind": "step",
+      "badge": "当前步骤",
+      "icon": "步"
+    },
+    {
+      "id": "self-test",
+      "title": "自测与出口验收",
+      "description": "先作答，再核对判定要点。",
+      "entry_label": "开始自测",
+      "file": "self-test.html",
+      "source": "content/self-test.html",
+      "group": "practice",
+      "kind": "quiz",
+      "badge": "待作答",
+      "icon": "测"
+    },
+    {
+      "id": "cards-source",
+      "title": "记忆卡片 · 源文档",
+      "description": "保留核心代码、编号和一句话记忆锚点。",
+      "entry_label": "查看源卡片",
+      "file": "cards-source.html",
+      "source": "content/cards-source.html",
+      "group": "practice",
+      "kind": "cards-source",
+      "icon": "卡"
+    },
+    {
+      "id": "cards-typing",
+      "title": "记忆卡片 · 打字默写",
+      "description": "与源卡片同编号的空白默写版，不提供任何代码片段或提示。",
+      "entry_label": "打开打字默写",
+      "file": "cards-typing.html",
+      "source": "content/cards-typing.html",
+      "group": "practice",
+      "kind": "cards-typing",
+      "icon": "打"
+    },
+    {
+      "id": "course-state",
+      "title": "课程状态",
+      "description": "集中显示当前步、验收结果、薄弱点和复习队列。",
+      "entry_label": "查看进度与复习",
+      "file": "course-state.html",
+      "source": "content/course-state.html",
+      "group": "progress",
+      "kind": "state",
+      "icon": "状"
+    },
+    {
+      "id": "next-outline",
+      "title": "第 3 步备课草稿",
+      "description": "遵守依赖顺序的 N+2 大纲和卡片草稿。",
+      "entry_label": "查看下一阶段草稿",
+      "file": "next-outline.html",
+      "source": "content/next-outline.html",
+      "group": "progress",
+      "kind": "draft",
+      "badge": "已备 N+2",
+      "icon": "草"
+    }
+  ]
+}

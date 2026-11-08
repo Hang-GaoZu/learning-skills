@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>课程主线 · 请求处理入门</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="document" data-kind="progress">
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="course-sidebar" aria-label="课程文档导航">
+      <div class="sidebar-brand">
+        <a class="brand-link" href="index.html">
+          <span class="brand-mark" aria-hidden="true">学</span>
+          <span>
+            <strong>请求处理入门</strong>
+            <small>HTML 学习站点</small>
+          </span>
+        </a>
+      </div>
+      <div class="sidebar-status">
+        <span>课程进度</span>
+        <strong>第 1 步</strong>
+      </div>
+      <nav class="side-nav">
+        <div class="nav-group">
+<p class="nav-group-title">开始学习</p>
+<a class="side-link" href="notes.html"><span class="side-icon" aria-hidden="true">记</span><span>主笔记</span></a>
+<a class="side-link is-active" href="learning-overview.html" aria-current="page"><span class="side-icon" aria-hidden="true">线</span><span>课程主线</span></a>
+</div>
+<div class="nav-group">
+<p class="nav-group-title">课程正文</p>
+<a class="side-link" href="step-01.html"><span class="side-icon" aria-hidden="true">步</span><span>第 1 步 · 三关口模型</span></a>
+</div>
+<div class="nav-group">
+<p class="nav-group-title">练习与记忆</p>
+<a class="side-link" href="self-test.html"><span class="side-icon" aria-hidden="true">测</span><span>自测与出口验收</span></a>
+<a class="side-link" href="cards-source.html"><span class="side-icon" aria-hidden="true">卡</span><span>记忆卡片 · 源文档</span></a>
+<a class="side-link" href="cards-typing.html"><span class="side-icon" aria-hidden="true">打</span><span>记忆卡片 · 打字默写</span></a>
+</div>
+<div class="nav-group">
+<p class="nav-group-title">进度管理</p>
+<a class="side-link" href="course-state.html"><span class="side-icon" aria-hidden="true">状</span><span>课程状态</span></a>
+<a class="side-link" href="next-outline.html"><span class="side-icon" aria-hidden="true">草</span><span>第 3 步备课草稿</span></a>
+</div>
+      </nav>
+      <div class="sidebar-footer">
+        <p>文档分区：开始学习</p>
+        <p>更新 2026-11-01</p>
+      </div>
+    </aside>
+
+    <main class="main-content" id="main-content">
+      <div class="mobile-bar">
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="course-sidebar">
+          <span aria-hidden="true">☰</span>
+          目录
+        </button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换明暗主题">
+          <span data-theme-label>深色</span>
+        </button>
+      </div>
+
+      <header class="doc-header">
+        <div class="breadcrumbs">
+          <a href="index.html">学习总览</a>
+          <span aria-hidden="true">/</span>
+          <span>开始学习</span>
+        </div>
+        <div class="doc-title-row">
+          <div>
+            <p class="eyebrow">progress</p>
+            <h1>课程主线</h1>
+            <p class="doc-description">一条总线串起所有学习节点，并显示进度、分支和复习标记。</p>
+          </div>
+          <span class="badge">动态计算</span>
+        </div>
+      </header>
+
+      <article class="doc-content" id="document-content">
+        <p class="kicker">课程主线</p>
+<h1>一条总线串起你的学习</h1>
+<p>主线从左到右连接所有学习节点。展开节点可以查看它的分支内容、状态和复习标记。进度由 <code>course-state.json</code> 自动计算。</p>
+
+<div class="progress-dashboard" data-progress-dashboard="" data-progress-advance="25" data-progress-mastery="12.5"><section class="overview-hero" aria-labelledby="overview-title"><div><p class="eyebrow">全课程视图</p><h2 id="overview-title">学习到哪里，掌握到什么程度</h2><p>完成第 1 步「三关口模型」并通过出口验收</p></div><div class="overview-score"><strong>12.5%</strong><span>验收掌握度</span></div></section><div class="overview-metrics"><div><span>课程推进</span><strong>1 / 4</strong><div class="mini-track"><span style="width:25%"></span></div></div><div><span>已掌握</span><strong>0 步</strong><small>加权 0.5 / 4</small><div class="mini-track"><span class="is-mastery" style="width:12.5%"></span></div></div><div><span>待复习</span><strong>1 项</strong><small>连续两次独立答对后移出</small></div></div><div class="next-action"><div class="next-action-copy"><span>下一步建议</span><strong>先复习 1 个待复习概念</strong></div><small>因为当前主线仍有到期复习项</small></div><h2 id="course-map">课程主线</h2><div class="course-bus" data-course-bus data-node-count="4"><div class="bus-line"><details class="bus-node status-half" data-step="1" open aria-current="step"><summary class="bus-node-head"><span class="bus-dot">1</span><span class="bus-node-copy"><strong>三关口模型</strong><small>基础流程</small></span><span class="review-flag">待复习</span><span class="status-pill status-half">半掌握</span></summary><ul class="branch-list"><li class="branch-row"><span class="branch-title">三个关口各管一件事</span><span class="status-pill status-half">半掌握</span><a class="branch-link" href="step-01.html">进入</a></li><li class="branch-row"><span class="branch-title">图形与代码同步演示</span><span class="status-pill status-half">半掌握</span><a class="branch-link" href="step-01.html">进入</a></li><li class="branch-row"><span class="branch-title">出口验收</span><span class="status-pill status-unlearned">未学习</span><a class="branch-link" href="self-test.html">进入</a></li></ul></details><details class="bus-node status-unlearned" data-step="2"><summary class="bus-node-head"><span class="bus-dot">2</span><span class="bus-node-copy"><strong>队列背压</strong><small>基础流程</small></span><span class="status-pill status-unlearned">未学习</span></summary><ul class="branch-list"><li class="branch-row"><span class="branch-title">容量边界</span><span class="status-pill status-unlearned">未学习</span><span class="branch-link is-disabled">未开始</span></li><li class="branch-row"><span class="branch-title">拒绝策略</span><span class="status-pill status-unlearned">未学习</span><span class="branch-link is-disabled">未开始</span></li><li class="branch-row"><span class="branch-title">恢复演示</span><span class="status-pill status-unlearned">未学习</span><span class="branch-link is-disabled">未开始</span></li></ul></details><details class="bus-node status-unlearned" data-step="3"><summary class="bus-node-head"><span class="bus-dot">3</span><span class="bus-node-copy"><strong>失败重试</strong><small>恢复策略</small></span><span class="status-pill status-unlearned">未学习</span></summary><ul class="branch-list"><li class="branch-row"><span class="branch-title">按阶段识别失败</span><span class="status-pill status-unlearned">未学习</span><span class="branch-link is-disabled">未开始</span></li><li class="branch-row"><span class="branch-title">安全重试</span><span class="status-pill status-unlearned">未学习</span><span class="branch-link is-disabled">未开始</span></li></ul></details><details class="bus-node status-unlearned" data-step="4"><summary class="bus-node-head"><span class="bus-dot">4</span><span class="bus-node-copy"><strong>超时与幂等</strong><small>恢复策略</small></span><span class="status-pill status-unlearned">未学习</span></summary><ul class="branch-list"><li class="branch-row"><span class="branch-title">超时边界</span><span class="status-pill status-unlearned">未学习</span><span class="branch-link is-disabled">未开始</span></li><li class="branch-row"><span class="branch-title">幂等键</span><span class="status-pill status-unlearned">未学习</span><span class="branch-link is-disabled">未开始</span></li></ul></details></div></div><h2 id="review-queue">复习队列</h2><div class="table-wrap"><table><thead><tr><th>概念</th><th>来源</th><th>到期</th><th>连续答对</th></tr></thead><tbody><tr><td>处理完成与结果已返回的区别</td><td>第 1 步</td><td>下次开课</td><td>0 次</td></tr></tbody></table></div><h2 id="weak-points">当前薄弱点</h2><div class="weak-tags"><span>处理完成不等于已经交付</span></div><h2 id="acceptance-history">最近验收</h2><div class="table-wrap"><table><thead><tr><th>日期</th><th>步骤</th><th>概念</th><th>结果</th><th>提示层级</th><th>错误类型</th></tr></thead><tbody><tr><td>2026-11-01</td><td>1</td><td>三关口顺序</td><td>半掌握</td><td>2</td><td>概念混淆</td></tr></tbody></table></div><div class="overview-footnote"><span>N+2 备课：第 3 步已备</span><span>状态更新 2026-11-01</span></div></div>
+      </article>
+
+      <nav class="page-nav" aria-label="文档前后导航">
+        <a class="page-nav-link" href="notes.html"><span>上一份</span><strong>主笔记</strong></a>
+        <a class="page-nav-home" href="index.html">返回总览</a>
+        <a class="page-nav-link align-right" href="step-01.html"><span>下一份</span><strong>第 1 步 · 三关口模型</strong></a>
+      </nav>
+
+      <footer class="site-footer">
+        <p>请求处理入门</p>
+        <p>最后更新 2026-11-01</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

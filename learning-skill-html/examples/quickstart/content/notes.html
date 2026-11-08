@@ -1,0 +1,26 @@
+<p class="kicker">课程主干</p>
+<h1>请求处理主笔记</h1>
+<p>核心口诀：<strong>先进队，后处理，再返回</strong>。顺序变化不是排版问题，而是系统语义变化。</p>
+
+<h2>累计比喻地图</h2>
+<pre><code>饭馆
+├─ 顾客 ───────── 请求
+├─ 等候区 ─────── 队列
+├─ 服务窗口 ───── 处理器
+└─ 出餐口 ─────── 响应</code></pre>
+
+<h2>进度表</h2>
+<table>
+  <thead>
+    <tr><th>步骤</th><th>概念</th><th>验收</th><th>薄弱点</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>三关口模型</td><td>待作答</td><td>暂无</td></tr>
+    <tr><td>2</td><td>队列背压</td><td>待学</td><td>—</td></tr>
+    <tr><td>3</td><td>失败重试</td><td>待学</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <strong>边界提醒：</strong>“处理”并不等于“成功”。处理完成只表示计算结束，返回步骤仍可能遇到调用方已离开等情况。
+</div>

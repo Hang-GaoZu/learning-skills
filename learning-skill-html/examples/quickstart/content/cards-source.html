@@ -1,0 +1,13 @@
+<p class="kicker">源文档</p>
+<h1>记忆卡片</h1>
+
+<h2>卡片 1：三关口顺序</h2>
+<pre><code>queue.push(request);
+result = process(request);
+reply(result);</code></pre>
+<p><strong>要点一句话：</strong>先进队，后处理，再返回。</p>
+
+<h2>卡片 2：状态递进</h2>
+<pre><code>request: 待处理 → 处理中 → 完成
+delivered: false → false → true</code></pre>
+<p><strong>要点一句话：</strong>处理完成不等于已经交付。</p>

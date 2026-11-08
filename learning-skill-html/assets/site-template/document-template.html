@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{{DOC_TITLE}} · {{COURSE_TITLE}}</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="document" data-kind="{{DOC_KIND}}">
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="course-sidebar" aria-label="课程文档导航">
+      <div class="sidebar-brand">
+        <a class="brand-link" href="index.html">
+          <span class="brand-mark" aria-hidden="true">学</span>
+          <span>
+            <strong>{{COURSE_TITLE}}</strong>
+            <small>HTML 学习站点</small>
+          </span>
+        </a>
+      </div>
+      <div class="sidebar-status">
+        <span>课程进度</span>
+        <strong>第 {{CURRENT_STEP}} 步</strong>
+      </div>
+      <nav class="side-nav">
+        {{SIDEBAR_NAV}}
+      </nav>
+      <div class="sidebar-footer">
+        <p>文档分区：{{GROUP_TITLE}}</p>
+        <p>更新 {{UPDATED}}</p>
+      </div>
+    </aside>
+
+    <main class="main-content" id="main-content">
+      <div class="mobile-bar">
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="course-sidebar">
+          <span aria-hidden="true">☰</span>
+          目录
+        </button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换明暗主题">
+          <span data-theme-label>深色</span>
+        </button>
+      </div>
+
+      <header class="doc-header">
+        <div class="breadcrumbs">
+          <a href="index.html">学习总览</a>
+          <span aria-hidden="true">/</span>
+          <span>{{GROUP_TITLE}}</span>
+        </div>
+        <div class="doc-title-row">
+          <div>
+            <p class="eyebrow">{{DOC_KIND}}</p>
+            <h1>{{DOC_TITLE}}</h1>
+            <p class="doc-description">{{DOC_DESCRIPTION}}</p>
+          </div>
+          {{BADGE}}
+        </div>
+      </header>
+
+      <article class="doc-content" id="document-content">
+        {{BODY}}
+      </article>
+
+      <nav class="page-nav" aria-label="文档前后导航">
+        {{PREVIOUS_LINK}}
+        <a class="page-nav-home" href="index.html">返回总览</a>
+        {{NEXT_LINK}}
+      </nav>
+
+      <footer class="site-footer">
+        <p>{{COURSE_TITLE}}</p>
+        <p>最后更新 {{UPDATED}}</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

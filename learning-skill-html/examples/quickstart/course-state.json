@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "course": {
+    "title": "请求处理入门",
+    "current_step": 1,
+    "completed_steps": [],
+    "prepared_step": 3,
+    "last_updated": "2026-11-01"
+  },
+  "steps": [
+    {
+      "number": 1,
+      "title": "三关口模型",
+      "chapter": "基础流程",
+      "status": "half",
+      "file": "step-01.html",
+      "branches": [
+        {
+          "title": "三个关口各管一件事",
+          "status": "half",
+          "file": "step-01.html"
+        },
+        {
+          "title": "图形与代码同步演示",
+          "status": "half",
+          "file": "step-01.html"
+        },
+        {
+          "title": "出口验收",
+          "status": "unlearned",
+          "file": "self-test.html"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "队列背压",
+      "chapter": "基础流程",
+      "status": "unlearned",
+      "branches": [
+        {
+          "title": "容量边界",
+          "status": "unlearned"
+        },
+        {
+          "title": "拒绝策略",
+          "status": "unlearned"
+        },
+        {
+          "title": "恢复演示",
+          "status": "unlearned"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "失败重试",
+      "chapter": "恢复策略",
+      "status": "unlearned",
+      "branches": [
+        {
+          "title": "按阶段识别失败",
+          "status": "unlearned"
+        },
+        {
+          "title": "安全重试",
+          "status": "unlearned"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "超时与幂等",
+      "chapter": "恢复策略",
+      "status": "unlearned",
+      "branches": [
+        {
+          "title": "超时边界",
+          "status": "unlearned"
+        },
+        {
+          "title": "幂等键",
+          "status": "unlearned"
+        }
+      ]
+    }
+  ],
+  "documents": {
+    "notes": "notes.html",
+    "current_lesson": "step-01.html",
+    "quiz": "self-test.html",
+    "cards_source": "cards-source.html",
+    "cards_typing": "cards-typing.html",
+    "learning_overview": "learning-overview.html",
+    "state": "course-state.html",
+    "next_outline": "next-outline.html"
+  },
+  "acceptance": [
+    {
+      "date": "2026-11-01",
+      "step": "1",
+      "concept": "三关口顺序",
+      "result": "半掌握",
+      "hint_level": "2",
+      "error_type": "概念混淆"
+    }
+  ],
+  "review_queue": [
+    {
+      "concept": "处理完成与结果已返回的区别",
+      "source_step": "1",
+      "due": "下次开课",
+      "correct_streak": 0,
+      "status": "due"
+    }
+  ],
+  "weak_points": [
+    "处理完成不等于已经交付"
+  ]
+}

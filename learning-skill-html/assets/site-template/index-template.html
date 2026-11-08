@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{{COURSE_TITLE}} · 学习总览</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="index">
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="course-sidebar" aria-label="课程文档导航">
+      <div class="sidebar-brand">
+        <a class="brand-link" href="index.html">
+          <span class="brand-mark" aria-hidden="true">学</span>
+          <span>
+            <strong>{{COURSE_TITLE}}</strong>
+            <small>HTML 学习站点</small>
+          </span>
+        </a>
+      </div>
+      <div class="sidebar-status">
+        <span>{{COURSE_STATUS}}</span>
+        <strong>第 {{CURRENT_STEP}} 步</strong>
+      </div>
+      <nav class="side-nav">
+        {{SIDEBAR_NAV}}
+      </nav>
+      <div class="sidebar-footer">
+        <p>{{DOC_COUNT}} 份文档 · {{GROUP_COUNT}} 个分区</p>
+        <p>更新 {{UPDATED}}</p>
+      </div>
+    </aside>
+
+    <main class="main-content" id="main-content">
+      <div class="mobile-bar">
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="course-sidebar">
+          <span aria-hidden="true">☰</span>
+          目录
+        </button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换明暗主题">
+          <span data-theme-label>深色</span>
+        </button>
+      </div>
+
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">学习控制台</p>
+          <h1>{{COURSE_TITLE}}</h1>
+          <p class="hero-summary">{{COURSE_SUMMARY}}</p>
+          <div class="hero-actions">
+            <a class="entry-button hero-primary" href="{{PRIMARY_NOTES_FILE}}">{{PRIMARY_NOTES_LABEL}}</a>
+          </div>
+        </div>
+        <div class="hero-status" aria-label="课程概况">
+          <div>
+            <span>当前状态</span>
+            <strong>{{COURSE_STATUS}}</strong>
+          </div>
+          <div>
+            <span>正在学习</span>
+            <strong>第 {{CURRENT_STEP}} 步</strong>
+          </div>
+          <div>
+            <span>资料入口</span>
+            <strong>{{DOC_COUNT}} 个</strong>
+          </div>
+        </div>
+      </header>
+
+      {{PROGRESS_SNAPSHOT}}
+
+      <section class="home-guide">
+        <div>
+          <p class="eyebrow">怎么使用</p>
+          <h2>常用资料在前，次要入口可展开</h2>
+        </div>
+        <p>当前步骤和常用资料直接进入；进度、备课与其他资料收在下方，展开后仍然是一份文档一个按钮。</p>
+      </section>
+
+      {{DOC_GROUPS}}
+
+      <footer class="site-footer">
+        <p>离线可用的结构化学习站点</p>
+        <p>最后更新 {{UPDATED}}</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

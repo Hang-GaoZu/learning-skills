@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>第 1 步 · 三关口模型 · 请求处理入门</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="document" data-kind="step">
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="course-sidebar" aria-label="课程文档导航">
+      <div class="sidebar-brand">
+        <a class="brand-link" href="index.html">
+          <span class="brand-mark" aria-hidden="true">学</span>
+          <span>
+            <strong>请求处理入门</strong>
+            <small>HTML 学习站点</small>
+          </span>
+        </a>
+      </div>
+      <div class="sidebar-status">
+        <span>课程进度</span>
+        <strong>第 1 步</strong>
+      </div>
+      <nav class="side-nav">
+        <div class="nav-group">
+<p class="nav-group-title">开始学习</p>
+<a class="side-link" href="notes.html"><span class="side-icon" aria-hidden="true">记</span><span>主笔记</span></a>
+<a class="side-link" href="learning-overview.html"><span class="side-icon" aria-hidden="true">线</span><span>课程主线</span></a>
+</div>
+<div class="nav-group">
+<p class="nav-group-title">课程正文</p>
+<a class="side-link is-active" href="step-01.html" aria-current="page"><span class="side-icon" aria-hidden="true">步</span><span>第 1 步 · 三关口模型</span></a>
+</div>
+<div class="nav-group">
+<p class="nav-group-title">练习与记忆</p>
+<a class="side-link" href="self-test.html"><span class="side-icon" aria-hidden="true">测</span><span>自测与出口验收</span></a>
+<a class="side-link" href="cards-source.html"><span class="side-icon" aria-hidden="true">卡</span><span>记忆卡片 · 源文档</span></a>
+<a class="side-link" href="cards-typing.html"><span class="side-icon" aria-hidden="true">打</span><span>记忆卡片 · 打字默写</span></a>
+</div>
+<div class="nav-group">
+<p class="nav-group-title">进度管理</p>
+<a class="side-link" href="course-state.html"><span class="side-icon" aria-hidden="true">状</span><span>课程状态</span></a>
+<a class="side-link" href="next-outline.html"><span class="side-icon" aria-hidden="true">草</span><span>第 3 步备课草稿</span></a>
+</div>
+      </nav>
+      <div class="sidebar-footer">
+        <p>文档分区：课程正文</p>
+        <p>更新 2026-11-01</p>
+      </div>
+    </aside>
+
+    <main class="main-content" id="main-content">
+      <div class="mobile-bar">
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="course-sidebar">
+          <span aria-hidden="true">☰</span>
+          目录
+        </button>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换明暗主题">
+          <span data-theme-label>深色</span>
+        </button>
+      </div>
+
+      <header class="doc-header">
+        <div class="breadcrumbs">
+          <a href="index.html">学习总览</a>
+          <span aria-hidden="true">/</span>
+          <span>课程正文</span>
+        </div>
+        <div class="doc-title-row">
+          <div>
+            <p class="eyebrow">step</p>
+            <h1>第 1 步 · 三关口模型</h1>
+            <p class="doc-description">看懂请求如何经过排队、处理和返回，并亲手追踪状态。</p>
+          </div>
+          <span class="badge">当前步骤</span>
+        </div>
+      </header>
+
+      <article class="doc-content" id="document-content">
+        <p class="kicker">第 1 步 · 核心概念</p>
+<h1>一条请求经过三个关口</h1>
+<p><strong>先给结论：</strong>排队解决“什么时候开始”，处理解决“做什么”，返回解决“结果交给谁”。三个关口各自负责不同问题。</p>
+
+<h2>生活类比</h2>
+<p>饭馆里，顾客先进入等候区，再由服务窗口完成点单。窗口做完餐，不是结束；餐还要从出餐口交给顾客。排队、操作、交付是三个动作。</p>
+
+<section class="demo" data-demo="duet" aria-labelledby="duet-title">
+  <div class="demo-head">
+    <div>
+      <p class="kicker">图形 + 代码</p>
+      <h2 id="duet-title">饭馆窗口怎样处理一次请求</h2>
+    </div>
+    <div class="demo-actions">
+      <button type="button" data-duet-prev>上一步</button>
+      <button type="button" class="primary" data-duet-next>下一步</button>
+      <button type="button" data-duet-play>自动播放</button>
+      <button type="button" data-duet-reset>重置</button>
+    </div>
+  </div>
+
+  <div class="duet-stage">
+    <div class="duet-scene" aria-label="饭馆排队、处理与返回的示意图">
+      <div class="duet-frame" data-duet-frame data-duet-note="请求进入等候区">
+        <div class="duet-lane"><span class="duet-request">请求</span></div>
+        <span class="duet-arrow" aria-hidden="true">→</span>
+        <div class="duet-window"><span>服务窗口</span><strong>空闲</strong></div>
+      </div>
+      <div class="duet-frame" data-duet-frame data-duet-note="窗口开始处理" hidden>
+        <div class="duet-lane"><span>等候区</span><strong>已清空</strong></div>
+        <span class="duet-arrow" aria-hidden="true">→</span>
+        <div class="duet-window"><span>服务窗口</span><strong>处理中</strong></div>
+      </div>
+      <div class="duet-frame" data-duet-frame data-duet-note="结果交回调用方" hidden>
+        <div class="duet-lane"><span>等候区</span><strong>空闲</strong></div>
+        <span class="duet-arrow" aria-hidden="true">→</span>
+        <div class="duet-result"><span>出餐口</span><strong>已返回</strong></div>
+      </div>
+    </div>
+
+    <pre class="duet-code"><code><span class="duet-code-line" data-duet-code>queue.push(request);</span>
+<span class="duet-code-line" data-duet-code>result = process(request);</span>
+<span class="duet-code-line" data-duet-code>reply(result);</span></code></pre>
+
+    <p class="duet-state" data-duet-state>请求先进入等候区，窗口还是空闲的。</p>
+    <p class="duet-state" data-duet-state hidden>窗口开始处理，等候区被清空。</p>
+    <p class="duet-state" data-duet-state hidden>处理完成后，结果从出餐口交回调用方。</p>
+  </div>
+  <p class="demo-status" data-duet-status aria-live="polite"></p>
+</section>
+
+<h2>常见错误</h2>
+<ul>
+  <li>把“处理完成”误当成“调用方已收到结果”。</li>
+  <li>跳过排队，直接假设处理器永远有空闲容量。</li>
+  <li>只画箭头的顺序，不说明每个关口负责的问题。</li>
+</ul>
+
+<section class="demo quiz" data-quiz aria-labelledby="quiz-title">
+  <p class="kicker">即时小练习</p>
+  <h2 id="quiz-title">如果删掉“返回”关口，会发生什么？</h2>
+  <textarea rows="4" aria-label="你的答案"></textarea>
+  <div class="demo-actions">
+    <button type="button" class="primary" data-quiz-reveal aria-expanded="false">提交并查看反馈</button>
+    <button type="button" data-quiz-reset>重做</button>
+  </div>
+  <div class="quiz-feedback" data-quiz-feedback hidden>
+    <strong>判定要点</strong>
+    <p>计算结果可能已经产生，但调用方拿不到它，依赖该结果的后续动作无法开始。</p>
+  </div>
+</section>
+
+<h2>一句话总结</h2>
+<div class="callout"><strong>先进队，后处理，再返回；三个关口各管一件事。</strong></div>
+
+      </article>
+
+      <nav class="page-nav" aria-label="文档前后导航">
+        <a class="page-nav-link" href="learning-overview.html"><span>上一份</span><strong>课程主线</strong></a>
+        <a class="page-nav-home" href="index.html">返回总览</a>
+        <a class="page-nav-link align-right" href="self-test.html"><span>下一份</span><strong>自测与出口验收</strong></a>
+      </nav>
+
+      <footer class="site-footer">
+        <p>请求处理入门</p>
+        <p>最后更新 2026-11-01</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

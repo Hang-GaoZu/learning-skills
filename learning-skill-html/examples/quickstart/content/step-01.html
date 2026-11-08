@@ -1,0 +1,74 @@
+<p class="kicker">第 1 步 · 核心概念</p>
+<h1>一条请求经过三个关口</h1>
+<p><strong>先给结论：</strong>排队解决“什么时候开始”，处理解决“做什么”，返回解决“结果交给谁”。三个关口各自负责不同问题。</p>
+
+<h2>生活类比</h2>
+<p>饭馆里，顾客先进入等候区，再由服务窗口完成点单。窗口做完餐，不是结束；餐还要从出餐口交给顾客。排队、操作、交付是三个动作。</p>
+
+<section class="demo" data-demo="duet" aria-labelledby="duet-title">
+  <div class="demo-head">
+    <div>
+      <p class="kicker">图形 + 代码</p>
+      <h2 id="duet-title">饭馆窗口怎样处理一次请求</h2>
+    </div>
+    <div class="demo-actions">
+      <button type="button" data-duet-prev>上一步</button>
+      <button type="button" class="primary" data-duet-next>下一步</button>
+      <button type="button" data-duet-play>自动播放</button>
+      <button type="button" data-duet-reset>重置</button>
+    </div>
+  </div>
+
+  <div class="duet-stage">
+    <div class="duet-scene" aria-label="饭馆排队、处理与返回的示意图">
+      <div class="duet-frame" data-duet-frame data-duet-note="请求进入等候区">
+        <div class="duet-lane"><span class="duet-request">请求</span></div>
+        <span class="duet-arrow" aria-hidden="true">→</span>
+        <div class="duet-window"><span>服务窗口</span><strong>空闲</strong></div>
+      </div>
+      <div class="duet-frame" data-duet-frame data-duet-note="窗口开始处理" hidden>
+        <div class="duet-lane"><span>等候区</span><strong>已清空</strong></div>
+        <span class="duet-arrow" aria-hidden="true">→</span>
+        <div class="duet-window"><span>服务窗口</span><strong>处理中</strong></div>
+      </div>
+      <div class="duet-frame" data-duet-frame data-duet-note="结果交回调用方" hidden>
+        <div class="duet-lane"><span>等候区</span><strong>空闲</strong></div>
+        <span class="duet-arrow" aria-hidden="true">→</span>
+        <div class="duet-result"><span>出餐口</span><strong>已返回</strong></div>
+      </div>
+    </div>
+
+    <pre class="duet-code"><code><span class="duet-code-line" data-duet-code>queue.push(request);</span>
+<span class="duet-code-line" data-duet-code>result = process(request);</span>
+<span class="duet-code-line" data-duet-code>reply(result);</span></code></pre>
+
+    <p class="duet-state" data-duet-state>请求先进入等候区，窗口还是空闲的。</p>
+    <p class="duet-state" data-duet-state hidden>窗口开始处理，等候区被清空。</p>
+    <p class="duet-state" data-duet-state hidden>处理完成后，结果从出餐口交回调用方。</p>
+  </div>
+  <p class="demo-status" data-duet-status aria-live="polite"></p>
+</section>
+
+<h2>常见错误</h2>
+<ul>
+  <li>把“处理完成”误当成“调用方已收到结果”。</li>
+  <li>跳过排队，直接假设处理器永远有空闲容量。</li>
+  <li>只画箭头的顺序，不说明每个关口负责的问题。</li>
+</ul>
+
+<section class="demo quiz" data-quiz aria-labelledby="quiz-title">
+  <p class="kicker">即时小练习</p>
+  <h2 id="quiz-title">如果删掉“返回”关口，会发生什么？</h2>
+  <textarea rows="4" aria-label="你的答案"></textarea>
+  <div class="demo-actions">
+    <button type="button" class="primary" data-quiz-reveal aria-expanded="false">提交并查看反馈</button>
+    <button type="button" data-quiz-reset>重做</button>
+  </div>
+  <div class="quiz-feedback" data-quiz-feedback hidden>
+    <strong>判定要点</strong>
+    <p>计算结果可能已经产生，但调用方拿不到它，依赖该结果的后续动作无法开始。</p>
+  </div>
+</section>
+
+<h2>一句话总结</h2>
+<div class="callout"><strong>先进队，后处理，再返回；三个关口各管一件事。</strong></div>
