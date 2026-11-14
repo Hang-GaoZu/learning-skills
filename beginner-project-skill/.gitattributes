@@ -1,0 +1,7 @@
+# 统一按 LF 存储，避免 Windows / macOS 协作时换行符抖动
+* text=auto eol=lf
+
+# Markdown 与 YAML 明确按文本处理
+*.md   text eol=lf
+*.yaml text eol=lf
+*.yml  text eol=lf
